@@ -46,15 +46,29 @@
                                 <rect key="frame" x="118" y="337" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hsr-JU-zfc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG5-F7-eNp">
                                 <rect key="frame" x="180" y="337" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerUsr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zUZ-2D-NmY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="iZO-P7-pg1" id="z5d-wC-HSd"/>
+                        <outlet property="loginBtnAct" destination="iZO-P7-pg1" id="5d1-0I-wbo"/>
+                        <outlet property="passTextField" destination="WbE-ZH-p3d" id="9AF-qk-D8m"/>
+                        <outlet property="topLabel" destination="q82-Mw-O53" id="zYt-cx-Dvf"/>
+                        <outlet property="topLabelTxtMod" destination="q82-Mw-O53" id="ker-mR-00f"/>
+                        <outlet property="userTextField" destination="Asc-hB-k1Z" id="P0T-7K-pCP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
