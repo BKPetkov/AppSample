@@ -11,8 +11,10 @@ import Firebase
 import FirebaseAuth
 import FirebaseAnalytics
 import FirebaseDatabase
+import ImagePicker
+import Lightbox
 
-class CameraViewController: UIViewController, UITextViewDelegate {
+class CameraViewController: UIViewController, UITextViewDelegate, ImagePickerDelegate {
 
     // MARK: Properties
     
@@ -97,14 +99,40 @@ class CameraViewController: UIViewController, UITextViewDelegate {
         
         print(estaTextField.text)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "PhotoPickerViewController")
-        self.present(controller, animated: true, completion: nil)
+       // let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
+        
+        
+       // let controller = storyboard.instantiateViewController(withIdentifier: "PhotoPickerViewController")
+        
+        
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
         
         
     }
     
+      // MARK: - ImagePickerDelegate
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard images.count > 0 else { return }
+        
+        let lightboxImages = images.map {
+            return LightboxImage(image: $0)
+        }
+        
+        let lightbox = LightboxController(images: lightboxImages, startIndex: 0)
+        imagePicker.present(lightbox, animated: true, completion: nil)
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
     
     
     
