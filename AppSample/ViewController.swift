@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     
@@ -26,7 +29,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        userTextField.delegate = self
+        passTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,15 +38,70 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        
+//    }
+    
+    
 
     //MARK: Actions
     
-    
     @IBAction func logIn(_ sender: UIButton) {
+        
+        let email = userTextField.text
+        let passw = passTextField.text
+        // Login using Firebase
+        Auth.auth().signIn(withEmail: email!, password: passw!) { (user, error) in
+            // ...
+            print (error)
+            if (error == nil){
+                 self.topLabel.text =  "Hi " + self.userTextField.text!
+            }
+            else{
+                self.topLabel.text = "Invalid Login"
+            }
+        }
+        
+        
+     
+        //
+        
     }
     
     
     @IBAction func registerUsr(_ sender: UIButton) {
+        
+        
+        // Create User in Firebase
+        
+        let email = userTextField.text
+        let password = passTextField.text
+        Auth.auth().createUser(withEmail: email!, password: password!) { (user, error) in
+            // ...
+            print (error)
+            if (error == nil){
+                self.topLabel.text = "You are now Registered!"
+            }
+            else{
+                self.topLabel.text = "Invalid Entry"
+            }
+
+            // switch statement to display error message in app
+            
+        }
+        
+   
+        
+  
     }
     
 }

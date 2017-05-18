@@ -40,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZO-P7-pg1">
                                 <rect key="frame" x="118" y="337" width="46" height="30"/>
@@ -63,10 +63,8 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="iZO-P7-pg1" id="z5d-wC-HSd"/>
-                        <outlet property="loginBtnAct" destination="iZO-P7-pg1" id="5d1-0I-wbo"/>
                         <outlet property="passTextField" destination="WbE-ZH-p3d" id="9AF-qk-D8m"/>
                         <outlet property="topLabel" destination="q82-Mw-O53" id="zYt-cx-Dvf"/>
-                        <outlet property="topLabelTxtMod" destination="q82-Mw-O53" id="ker-mR-00f"/>
                         <outlet property="userTextField" destination="Asc-hB-k1Z" id="P0T-7K-pCP"/>
                     </connections>
                 </viewController>
