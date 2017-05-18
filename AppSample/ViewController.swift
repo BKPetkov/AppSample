@@ -90,12 +90,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
             print (error)
             if (error == nil){
                 self.topLabel.text = "You are now Registered!"
+                
+                // Switch to Camera View Controller
+                
+
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "cameraViewController")
+                self.present(controller, animated: true, completion: nil)
             }
             else{
                 self.topLabel.text = "Invalid Entry"
             }
 
-            // switch statement to display error message in app
+            // Add switch statement to display error messages in app
             
         }
         
