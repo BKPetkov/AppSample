@@ -15,6 +15,7 @@
 		A9C1E4341ECDBDA50022C6C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E4321ECDBDA50022C6C0 /* Main.storyboard */; };
 		A9C1E4361ECDBDA50022C6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E4351ECDBDA50022C6C0 /* Assets.xcassets */; };
 		A9C1E4391ECDBDA50022C6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E4371ECDBDA50022C6C0 /* LaunchScreen.storyboard */; };
+		A9E404611ECE35FE003C6070 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E404601ECE35FE003C6070 /* PhotoPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A9C1E4351ECDBDA50022C6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9C1E4381ECDBDA50022C6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9C1E43A1ECDBDA50022C6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9E404601ECE35FE003C6070 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				A9C1E4351ECDBDA50022C6C0 /* Assets.xcassets */,
 				A9C1E4371ECDBDA50022C6C0 /* LaunchScreen.storyboard */,
 				A9C1E43A1ECDBDA50022C6C0 /* Info.plist */,
+				A9E404601ECE35FE003C6070 /* PhotoPickerViewController.swift */,
 			);
 			path = AppSample;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9C1E4311ECDBDA50022C6C0 /* ViewController.swift in Sources */,
+				A9E404611ECE35FE003C6070 /* PhotoPickerViewController.swift in Sources */,
 				A9C1E42F1ECDBDA50022C6C0 /* AppDelegate.swift in Sources */,
 				A901DD441ECDFB3700E25D1F /* CameraViewController.swift in Sources */,
 			);

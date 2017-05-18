@@ -32,14 +32,6 @@ class CameraViewController: UIViewController, UITextViewDelegate {
     
         print("debug: CameraViewController is now active")
         
-        var ref: DatabaseReference!
-        
-        ref = Database.database().reference()
-        
-        let username = "Modified Username"
-        
-        ref.child("testChild").setValue(username)
-
 
     }
     
@@ -94,6 +86,23 @@ class CameraViewController: UIViewController, UITextViewDelegate {
     @IBAction func estaTxtBtnSubmit(_ sender: UIButton) {
         
         print("Send Message Btn Pressed")
+        
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
+        
+        ref.child("email").setValue(estaTextField.text)
+        // creates new database node under the user's email
+        // todo: should segue email constant from ViewController
+        
+        print(estaTextField.text)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "PhotoPickerViewController")
+        self.present(controller, animated: true, completion: nil)
+        
+        
+        
     }
     
     
