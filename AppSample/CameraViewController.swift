@@ -9,16 +9,68 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseAnalytics
+import FirebaseDatabase
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UITextViewDelegate {
 
+    // MARK: Properties
+    
+    @IBOutlet weak var estaTextField: UITextView!
+    
+    @IBOutlet weak var estaTextBtn: UIButton!
+    
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        print("CameraViewController is now active")
+        estaTextField.delegate = self
+    
+        print("debug: CameraViewController is now active")
+        
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
+        
+        let username = "Modified Username"
+        
+        ref.child("testChild").setValue(username)
+
+
     }
+    
+    
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    //MARK: UITextViewDelegate
+    
+    
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        return true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+            estaTextField.text = ""
+            estaTextField.textColor = UIColor.black
+            print("debugging statement")
+        
+    }
+    
+
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,5 +87,17 @@ class CameraViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // MARK: Actions
+    
+    @IBAction func estaTxtBtnSubmit(_ sender: UIButton) {
+        
+        print("Send Message Btn Pressed")
+    }
+    
+    
+    
+    
 
 }
