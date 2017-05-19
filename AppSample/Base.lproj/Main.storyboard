@@ -126,9 +126,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYm-Te-ahn">
-                                <rect key="frame" x="48" y="617" width="96" height="30"/>
+                                <rect key="frame" x="243" y="617" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send Photo!"/>
+                                <connections>
+                                    <action selector="sendPhoto:" destination="yoR-MY-hvu" eventType="touchUpInside" id="e5V-60-wHl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhy-bW-slk">
+                                <rect key="frame" x="48" y="617" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pick Photo"/>
+                                <connections>
+                                    <action selector="pickPhoto:" destination="yoR-MY-hvu" eventType="touchUpInside" id="DLv-cE-QOy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -136,6 +147,7 @@
                     <connections>
                         <outlet property="estaTextBtn" destination="nTf-gW-M43" id="wSf-NU-PVo"/>
                         <outlet property="estaTextField" destination="rdz-Fh-5LP" id="r3f-qC-V7X"/>
+                        <outlet property="testImgView" destination="HpV-KN-IMy" id="Qwd-AO-XTa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcF-5U-Dws" userLabel="First Responder" sceneMemberID="firstResponder"/>
