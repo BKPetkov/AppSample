@@ -6,7 +6,11 @@
 //  Copyright © 2017 Brian. All rights reserved.
 //
 
+
 import UIKit
+
+// Add supporting functions here
+// For instance, viewing a group of already uploaded photos
 
 class PhotoPickerViewController: UIImagePickerController, UIImagePickerControllerDelegate {
 

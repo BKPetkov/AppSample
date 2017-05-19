@@ -172,6 +172,16 @@ class CameraViewController: UIViewController, UITextViewDelegate, ImagePickerDel
             }
         }
         
+        
+        // Now switch to TableView
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CTableViewController")
+        self.present(controller, animated: true, completion: nil)
+
+        
+        
+        
     }
     
     
