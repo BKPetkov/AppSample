@@ -16,6 +16,7 @@
 		A9C1E4361ECDBDA50022C6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E4351ECDBDA50022C6C0 /* Assets.xcassets */; };
 		A9C1E4391ECDBDA50022C6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E4371ECDBDA50022C6C0 /* LaunchScreen.storyboard */; };
 		A9CE28011ECF2A61007DA0C9 /* CTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CE28001ECF2A61007DA0C9 /* CTableViewController.swift */; };
+		A9CE28051ECF324F007DA0C9 /* Contractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CE28041ECF324F007DA0C9 /* Contractor.swift */; };
 		A9E404611ECE35FE003C6070 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E404601ECE35FE003C6070 /* PhotoPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		A9C1E4381ECDBDA50022C6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9C1E43A1ECDBDA50022C6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9CE28001ECF2A61007DA0C9 /* CTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTableViewController.swift; sourceTree = "<group>"; };
+		A9CE28041ECF324F007DA0C9 /* Contractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contractor.swift; sourceTree = "<group>"; };
 		A9E404601ECE35FE003C6070 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				A9C1E43A1ECDBDA50022C6C0 /* Info.plist */,
 				A9E404601ECE35FE003C6070 /* PhotoPickerViewController.swift */,
 				A9CE28001ECF2A61007DA0C9 /* CTableViewController.swift */,
+				A9CE28041ECF324F007DA0C9 /* Contractor.swift */,
 			);
 			path = AppSample;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				A9C1E42F1ECDBDA50022C6C0 /* AppDelegate.swift in Sources */,
 				A9CE28011ECF2A61007DA0C9 /* CTableViewController.swift in Sources */,
 				A901DD441ECDFB3700E25D1F /* CameraViewController.swift in Sources */,
+				A9CE28051ECF324F007DA0C9 /* Contractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
